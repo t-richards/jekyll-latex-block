@@ -1,0 +1,9 @@
+AllCops:
+  Include:
+    - '*.gemspec'
+    - '**/*.rb'
+    - Gemfile
+    - Rakefile
+  Exclude:
+    - 'bin/**/*'
+    - 'vendor/**/*'
