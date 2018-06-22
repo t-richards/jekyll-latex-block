@@ -4,8 +4,6 @@ module Jekyll
   class LatexBlockTest < Minitest::Test
     include Liquid
 
-    def setup; end
-
     def test_that_it_has_a_version_number
       refute_nil(::Jekyll::LatexBlock::VERSION)
     end
