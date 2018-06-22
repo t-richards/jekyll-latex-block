@@ -1,5 +1,7 @@
 # Jekyll LaTeX Block
 
+![Gem](https://img.shields.io/gem/v/jekyll-latex-block.svg?style=flat-square)
+
 Jekyll LaTeX Block is a plugin for Jekyll that uses [KaTeX][katex] to render
 LaTeX at build time, without the need for client-side JavaScript.
 
@@ -14,7 +16,7 @@ Add this gem to your project's `gems.rb` or `Gemfile`:
 
 ```ruby
 group :jekyll_plugins do
-  gem "jekyll-latex-block", "~> 0.9.0"
+  gem "jekyll-latex-block", "~> 0.10.0.beta"
 end
 ```
 
