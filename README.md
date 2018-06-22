@@ -1,5 +1,6 @@
 # Jekyll LaTeX Block
 
+![Travis](https://img.shields.io/travis/t-richards/jekyll-latex-block.svg?style=flat-square)
 ![Gem](https://img.shields.io/gem/v/jekyll-latex-block.svg?style=flat-square)
 
 Jekyll LaTeX Block is a plugin for Jekyll that uses [KaTeX][katex] to render
