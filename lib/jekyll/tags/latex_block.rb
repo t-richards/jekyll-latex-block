@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 require 'execjs'
-require 'jekyll'
-require 'jekyll/latex_block/version'
 require 'liquid/tag/parser'
 
 module Jekyll
@@ -21,7 +19,7 @@ module Jekyll
       end
 
       def katex_path
-        File.expand_path('../js/katex.js', File.dirname(__FILE__))
+        File.expand_path('../../js/katex.js', File.dirname(__FILE__))
       end
 
       def render(context)
@@ -31,5 +29,3 @@ module Jekyll
     end
   end
 end
-
-Liquid::Template.register_tag('latex', Jekyll::Tags::LatexBlock)
