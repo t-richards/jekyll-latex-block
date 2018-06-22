@@ -34,6 +34,15 @@ e^{i \pi} + 1 = 0
 {% endlatex %}
 ```
 
+[Additional rendering options][rendering-opts] such as `displayMode` may be
+specified like so:
+
+```latex
+{% latex displayMode=true %}
+\int_{a}^a f(x) dx
+{% endlatex %}
+```
+
 To display the resulting markup properly, you MUST include KaTeX CSS and
 relevant web fonts on your site. The generated HTML _does not_ require KaTeX
 client-side JavaScript.
@@ -80,3 +89,4 @@ The gem is available as open source under the terms of the [MIT License][mit-lic
 [execjs]: https://github.com/rails/execjs
 [katex]: https://khan.github.io/KaTeX/
 [mit-license]: https://opensource.org/licenses/MIT
+[rendering-opts]: https://github.com/Khan/KaTeX#rendering-options
