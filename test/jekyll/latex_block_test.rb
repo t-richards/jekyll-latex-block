@@ -1,13 +1,13 @@
 require 'test_helper'
 
 module Jekyll
-  class LatexTest < Minitest::Test
+  class LatexBlockTest < Minitest::Test
     include Liquid
 
     def setup; end
 
     def test_that_it_has_a_version_number
-      refute_nil(::Jekyll::Latex::VERSION)
+      refute_nil(::Jekyll::LatexBlock::VERSION)
     end
 
     def test_it_renders_properly

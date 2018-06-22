@@ -1,16 +1,16 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'jekyll/latex/version'
+require 'jekyll/latex_block/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'jekyll-latex'
-  spec.version = Jekyll::Latex::VERSION
+  spec.name = 'jekyll-latex-block'
+  spec.version = Jekyll::LatexBlock::VERSION
   spec.authors = ['Tom Richards']
   spec.email = ['tom@tomrichards.net']
 
   spec.summary = 'LaTeX integration for Jekyll'
   spec.description = 'Renders LaTeX formulas to your site via KaTeX'
-  spec.homepage = 'https://github.com/t-richards/jekyll-latex'
+  spec.homepage = 'https://github.com/t-richards/jekyll-latex-block'
   spec.license = 'MIT'
 
   # Files in version control

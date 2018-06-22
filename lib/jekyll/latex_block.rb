@@ -2,7 +2,7 @@
 
 require 'execjs'
 require 'jekyll'
-require 'jekyll/latex/version'
+require 'jekyll/latex_block/version'
 require 'liquid/tag/parser'
 
 module Jekyll

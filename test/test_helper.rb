@@ -3,6 +3,6 @@ require 'simplecov'
 SimpleCov.start
 
 require 'jekyll'
-require 'jekyll/latex'
+require 'jekyll/latex_block'
 
 require 'minitest/autorun'
