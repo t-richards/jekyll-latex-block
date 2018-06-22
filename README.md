@@ -1,7 +1,7 @@
-# Jekyll LaTeX
+# Jekyll LaTeX Block
 
-Jekyll LaTeX is a plugin for Jekyll that uses [KaTeX][katex] to render LaTeX at
-build time, without the need for client-side JavaScript.
+Jekyll LaTeX Block is a plugin for Jekyll that uses [KaTeX][katex] to render
+LaTeX at build time, without the need for client-side JavaScript.
 
 ## Requirements
 
@@ -10,11 +10,11 @@ Ensure that your build environment has a JavaScript interpreter supported by
 
 ## Installation
 
-Add this line to your site's Gemfile:
+Add this gem to your project's `gems.rb` or `Gemfile`:
 
 ```ruby
 group :jekyll_plugins do
-  gem "jekyll-latex", "~> 0.9.0"
+  gem "jekyll-latex-block", "~> 0.9.0"
 end
 ```
 
