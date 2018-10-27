@@ -41,5 +41,16 @@ jobs:
           name: Lint code
           command: bin/rubocop
 
+      - run:
+          name: Build gem
+          command: bin/rake build
+
+      - run:
+          name: Inspect gem contents
+          command: |
+            cd pkg
+            tar xf *.gem
+            tar tvf data.tar.gz
+
       - store_test_results:
           path: test_results
