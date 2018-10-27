@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
   all_files = `git ls-files -z`.split("\x0")
   spec.files = all_files.grep(%r{^(lib)/})
   spec.executables = all_files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.extra_rdoc_files = %w(README.md LICENSE.txt)
+  spec.extra_rdoc_files = %w[README.md LICENSE.txt]
   spec.bindir = 'exe'
   spec.require_paths = ['lib']
 
