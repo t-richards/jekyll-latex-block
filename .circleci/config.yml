@@ -16,6 +16,10 @@ jobs:
           command: ruby --version
 
       - run:
+          name: Update bundler
+          command: gem install bundler -v 2.0.1
+
+      - run:
           name: Bundler version
           command: bundle --version
 
