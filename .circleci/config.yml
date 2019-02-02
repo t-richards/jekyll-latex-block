@@ -8,6 +8,7 @@ jobs:
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
           JEKYLL_ENV: test
+          BUNDLER_VERSION: 2.0.1
     steps:
       - checkout
 
@@ -18,8 +19,11 @@ jobs:
       - run:
           name: Install Bundler 2
           command: |
-            gem uninstall bundler -a
-            gem install bundler -v 2.0.1
+            sudo gem update --system
+            sudo gem uninstall bundler
+            sudo rm /usr/local/bin/bundle
+            sudo rm /usr/local/bin/bundler
+            sudo gem install bundler
 
       - run:
           name: Bundler version
