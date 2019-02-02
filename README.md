@@ -1,6 +1,6 @@
 # Jekyll LaTeX Block
 
-[![Depfu](https://img.shields.io/depfu/t-richards/jekyll-latex-block.svg?style=flat-square)](https://depfu.com/github/t-richards/jekyll-latex-block?project=Bundler)
+[![CircleCI Build Status](https://img.shields.io/circleci/project/github/t-richards/jekyll-latex-block/master.svg?style=flat-square)](https://circleci.com/gh/t-richards/jekyll-latex-block)
 [![Gem Version](https://img.shields.io/gem/v/jekyll-latex-block.svg?style=flat-square)](https://rubygems.org/gems/jekyll-latex-block)
 
 Jekyll LaTeX Block is a plugin for [Jekyll][jekyll] that uses [KaTeX][katex] to
