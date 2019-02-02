@@ -80,6 +80,9 @@ $ bin/console
 
 # Lint code for style violations
 $ bin/rubocop
+
+# Build a gem into the pkg/ directory
+$ bin/rake build
 ```
 
 Bug reports and pull requests are welcome on GitHub at
