@@ -5,4 +5,5 @@ SimpleCov.start
 require 'jekyll'
 require 'jekyll-latex-block'
 
+require 'minitest/rg'
 require 'minitest/autorun'
