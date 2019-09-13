@@ -29,6 +29,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'simplecov', '~> 0.16'
 
   spec.add_dependency 'execjs', '~> 2.7'
-  spec.add_dependency 'jekyll', '~> 3.3'
+  spec.add_dependency 'jekyll', '>= 3.3', '< 5.0'
   spec.add_dependency 'liquid-tag-parser', '~> 1.9'
 end
