@@ -19,7 +19,8 @@ response = Net::HTTP.get_response(uri)
 
 if response.is_a?(Net::HTTPSuccess)
   IO.write('lib/js/katex.js', response.body)
-  puts "Successfully updated KaTeX to version #{ver}"
+  puts "Successfully updated KaTeX to version #{ver}."
+  puts "Don't forget to update the README.md!"
 else
   warn "Failed updating KaTeX to version #{ver}: #{response}"
 end
