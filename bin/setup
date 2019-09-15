@@ -4,10 +4,3 @@ IFS=$'\n\t'
 set -vx
 
 bundle install
-
-# Init and update git submodules
-git submodule init
-git submodule update
-
-# Vendor KaTeX js
-cp vendor/KaTeX/dist/katex.js lib/js/katex.js

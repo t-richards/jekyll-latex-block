@@ -1,4 +1,0 @@
-[submodule "vendor/KaTeX"]
-	path = vendor/KaTeX
-	url = https://github.com/KaTeX/KaTeX
-	branch = v0.10.0
