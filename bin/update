@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'fileutils'
+require 'net/http'
+
+$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
+require 'jekyll/latex_block/version'
+
+# Bump deps
+FileUtils.rm_f('Gemfile.lock')
+system('bundle install')
+system('bin/rubocop -a')
+
+# Update KaTeX JavaScript
+ver = Jekyll::LatexBlock::VERSION
+uri = URI("https://raw.githubusercontent.com/KaTeX/KaTeX/v#{ver}/dist/katex.js")
+response = Net::HTTP.get_response(uri)
+
+if response.is_a?(Net::HTTPSuccess)
+  IO.write('lib/js/katex.js', response.body)
+  puts "Successfully updated KaTeX to version #{ver}"
+else
+  warn "Failed updating KaTeX to version #{ver}: #{response}"
+end
