@@ -17,7 +17,7 @@ Add this gem to your project's `Gemfile`:
 
 ```ruby
 group :jekyll_plugins do
-  gem "jekyll-latex-block", "~> 0.11.0"
+  gem "jekyll-latex-block", "~> 0.11.1"
 end
 ```
 
@@ -55,7 +55,7 @@ client-side JavaScript.
 Place the following stylesheet inside your `<head>` tag:
 
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.0/katex.min.css" integrity="sha256-KoSSCu31XsbWh8THRt4pvxhcYkj3sEwDw/ZnIErNr4g=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" integrity="sha256-V8SV2MO1FUb63Bwht5Wx9x6PVHNa02gv8BgH/uH3ung=" crossorigin="anonymous" />
 ```
 
 ### Hard-mode CSS & Fonts Integration :warning:
