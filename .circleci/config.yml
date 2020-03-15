@@ -2,13 +2,13 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.6-stretch-node
+      - image: circleci/ruby:2.7-stretch-node
         environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
           JEKYLL_ENV: test
-          BUNDLER_VERSION: 2.0.1
+          BUNDLER_VERSION: 2.1.4
     steps:
       - checkout
 
@@ -20,7 +20,7 @@ jobs:
           name: Install Bundler 2
           command: |
             sudo gem update --system
-            sudo gem install bundler -f -v 2.0.2
+            sudo gem install bundler -f -v 2.1.4
 
       - run:
           name: Bundler version
