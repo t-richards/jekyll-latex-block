@@ -7,24 +7,19 @@ module Jekyll
   module Tags
     # LaTeX tag, HTML rendering via KaTeX
     class LatexBlock < Liquid::Block
-      def initialize(tag_name, markup, options)
-        @parsed_options = Liquid::Tag::Parser.new(markup).args
+      KATEX_PATH = File.expand_path(
+        '../../js/katex.js', File.dirname(__FILE__)
+      ).freeze
+      KATEX_JS = ExecJS.compile(File.read(KATEX_PATH)).freeze
+
+      def initialize(_tag_name, markup, _options)
+        @parsed_options = Parser.new(markup).args
         super
       end
 
-      def katex_js
-        # rubocop:disable Style/ClassVars
-        @@katex ||= ExecJS.compile(File.read(katex_path))
-        # rubocop:enable Style/ClassVars
-      end
-
-      def katex_path
-        File.expand_path('../../js/katex.js', File.dirname(__FILE__))
-      end
-
-      def render(context)
+      def render(_context)
         latex_source = super
-        katex_js.call('katex.renderToString', latex_source, @parsed_options)
+        KATEX_JS.call('katex.renderToString', latex_source, @parsed_options)
       end
     end
   end

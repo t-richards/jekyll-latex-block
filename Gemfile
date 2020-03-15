@@ -2,6 +2,9 @@
 
 source 'https://rubygems.org'
 
-git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
-
+# Specify your gem's dependencies in jekyll-latex-block.gemspec
 gemspec
+
+source 'https://oss:OVwryElNqwlpKKUrNp0zorxLinFHpG1k@gem.mutant.dev' do
+  gem 'mutant-license'
+end

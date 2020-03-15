@@ -5,7 +5,9 @@ AllCops:
     - Gemfile
     - Rakefile
   Exclude:
+    - bin/mutant
     - bin/rake
+    - bin/rspec
     - bin/rubocop
     - 'vendor/**/*'
 

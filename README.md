@@ -13,7 +13,7 @@ Ensure that your build environment has a JavaScript interpreter supported by
 
 ## Installation
 
-Add this gem to your project's `gems.rb` or `Gemfile`:
+Add this gem to your project's `Gemfile`:
 
 ```ruby
 group :jekyll_plugins do
