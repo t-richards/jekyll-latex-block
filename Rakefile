@@ -1,13 +1,21 @@
 # frozen_string_literal: true
 
 require 'bundler/gem_tasks'
-require 'rake/testtask'
+require 'rspec/core/rake_task'
 
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'test'
-  t.libs << 'lib'
-  t.test_files = FileList['test/**/*_test.rb']
-  t.options = '--rg'
+RSpec::Core::RakeTask.new(:spec)
+
+desc 'Run mutation testing'
+task :mutation do
+  sh %w[
+    bin/mutant
+    --include lib
+    --require jekyll-latex-block
+    --use rspec
+    --fail-fast
+    --
+    Jekyll::Tags::LatexBlock
+  ].join(' ')
 end
 
-task default: :test
+task default: :spec
