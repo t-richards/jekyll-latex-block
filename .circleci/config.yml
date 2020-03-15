@@ -42,7 +42,7 @@ jobs:
 
       - run:
           name: Run tests
-          command: bin/rake test
+          command: bin/rake spec
 
       - run:
           name: Lint code
