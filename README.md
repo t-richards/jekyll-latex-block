@@ -52,7 +52,14 @@ client-side JavaScript.
 
 ### Easy-mode CSS & Fonts Integration :heavy_check_mark:
 
-Place the following stylesheet inside your `<head>` tag:
+Place the following stylesheet just above your closing `</body>` tag.
+
+<details>
+<summary>Why not place it in the <tt>&lt;head&gt;</tt>?</summary>
+CSS is a blocking resource. If this external resource is (a) placed in the head, and (b) were to not load (or slowly load) for whatever reason, it would block the entire page from rendering.
+<br><br>
+The official recommendation for using this plugin is "external CSS belongs at the end of the body". Ultimately, you can do whatever you want. :shrug:
+</details>
 
 ```html
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" integrity="sha256-V8SV2MO1FUb63Bwht5Wx9x6PVHNa02gv8BgH/uH3ung=" crossorigin="anonymous" />
