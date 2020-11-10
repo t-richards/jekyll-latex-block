@@ -14,6 +14,7 @@ Gem::Specification.new do |spec|
   spec.description = 'Renders LaTeX formulas to your site via KaTeX'
   spec.homepage = 'https://github.com/t-richards/jekyll-latex-block'
   spec.license = 'MIT'
+  spec.required_ruby_version = '>= 2.4.0'
 
   all_files = `git ls-files -z`.split("\x0")
   spec.files = all_files.grep(%r{^(lib)/})
