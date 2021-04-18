@@ -10,11 +10,11 @@ require 'jekyll/latex_block/version'
 # Bump deps
 FileUtils.rm_f('Gemfile.lock')
 system('bundle install')
-system('bin/rubocop -a')
+system('bin/rubocop -A')
 
 # Update KaTeX JavaScript
 ver = Jekyll::LatexBlock::VERSION
-uri = URI("https://raw.githubusercontent.com/KaTeX/KaTeX/v#{ver}/dist/katex.js")
+uri = URI("https://cdn.jsdelivr.net/npm/katex@#{ver}/dist/katex.min.js")
 response = Net::HTTP.get_response(uri)
 
 if response.is_a?(Net::HTTPSuccess)

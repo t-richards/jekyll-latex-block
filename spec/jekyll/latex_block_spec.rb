@@ -4,10 +4,10 @@ require 'spec_helper'
 
 RSpec.describe Jekyll::LatexBlock do
   it 'has a version number' do
-    expect(::Jekyll::LatexBlock::VERSION).to_not eq(nil)
+    expect(::Jekyll::LatexBlock::VERSION).not_to be(nil)
   end
 
-  context '#render' do
+  describe '#render' do
     it 'is renderable' do
       euler = '{% latex %} e^{i \pi} + 1 = 0 {% endlatex %}'
       tag = Liquid::Template.parse(euler)

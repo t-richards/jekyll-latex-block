@@ -17,7 +17,7 @@ Add this gem to your project's `Gemfile`:
 
 ```ruby
 group :jekyll_plugins do
-  gem "jekyll-latex-block", "~> 0.12.0"
+  gem "jekyll-latex-block", "~> 0.13.2"
 end
 ```
 
@@ -62,7 +62,7 @@ The official recommendation for using this plugin is "external CSS belongs at th
 </details>
 
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css" integrity="sha512-el2z+rjIj40JeIlKyqcoRjGNjvwHVlyahNQ1PhSs4PCztr6jJ4GgpjgN+1a++L9HZxhLXpa4eLG3ry976z0O2Q==" crossorigin="anonymous" />
 ```
 
 ### Hard-mode CSS & Fonts Integration :warning:
