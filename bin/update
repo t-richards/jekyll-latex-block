@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require 'digest'
 require 'fileutils'
 require 'net/http'
 
@@ -14,13 +15,25 @@ system('bin/rubocop -A')
 
 # Update KaTeX JavaScript
 ver = Jekyll::LatexBlock::VERSION
-uri = URI("https://cdn.jsdelivr.net/npm/katex@#{ver}/dist/katex.min.js")
+uri = URI("https://cdnjs.cloudflare.com/ajax/libs/KaTeX/#{ver}/katex.min.js")
+expected_sri = 'O7WTu9pghLBfbQSGAf2xOFoRxDrHKS3kjRuuiCWttAf76q6h8Qj+KYPBF5EdZsE24LvXiFUshVNWaAxBOij8VA=='
 response = Net::HTTP.get_response(uri)
 
-if response.is_a?(Net::HTTPSuccess)
-  IO.write('lib/js/katex.js', response.body)
-  puts "Successfully updated KaTeX to version #{ver}."
-  puts "Don't forget to update the README.md!"
-else
+unless response.is_a?(Net::HTTPSuccess)
   warn "Failed updating KaTeX to version #{ver}: #{response}"
+  exit
 end
+
+hash = Digest::SHA512.base64digest(response.body)
+unless hash == expected_sri
+  warn <<~MSG
+    Script integrity did not match.
+      Actual:   #{hash}
+      Expected: #{expected_sri}
+  MSG
+  exit
+end
+
+IO.write('lib/js/katex.js', response.body)
+puts "Successfully updated KaTeX to version #{ver}."
+puts "Don't forget to update the README.md!"
