@@ -1,9 +1,5 @@
 # Jekyll LaTeX Block
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/t-richards/jekyll-latex-block/Test?style=flat-square)](https://github.com/t-richards/jekyll-latex-block/actions)
-[![Gem Version](https://img.shields.io/gem/v/jekyll-latex-block.svg?style=flat-square)](https://rubygems.org/gems/jekyll-latex-block)
-[![Code Coverage](https://img.shields.io/codecov/c/github/t-richards/jekyll-latex-block.svg?style=flat-square)](https://codecov.io/gh/t-richards/jekyll-latex-block)
-
 Jekyll LaTeX Block is a plugin for [Jekyll][jekyll] that uses [KaTeX][katex] to
 render LaTeX at build time, without the need for client-side JavaScript.
 
